@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "app-audio-chat"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Develop <57878266+iath-dev@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.39.0"
+openai-whisper = "^20240930"
+torch = "^2.5.1"
+transformers = "^4.46.2"
+langchain = "^0.3.7"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
