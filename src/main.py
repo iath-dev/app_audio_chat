@@ -34,9 +34,11 @@ def main():
 
         with st.spinner("Transcribiendo audio..."):
             transcription = whisper_model.transcribe(audio_np)["text"]
-            st.write("Transcripcion del audio:", transcription)
+            st.markdown("## Transcripcion del Audio:")
+            st.markdown(transcription)
 
-        st.write("Procesando el texto con el modelo de lenguaje...")
-        response = llm_model(transcription, max_length=200, do_sample=True)
-        
-        st.write("Respuesta del modelo:", response[0]["summary_text"])
+        with st.spinner("Procesando el texto con el modelo."):
+            response = llm_model(transcription, max_length=200, do_sample=True)
+            
+            st.markdown("## Respuesta del modelo:")
+            st.markdown(response[0]["summary_text"])
