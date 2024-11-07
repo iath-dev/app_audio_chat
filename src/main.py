@@ -22,6 +22,8 @@ def main():
     whisper_model = load_whisper_model()
     llm_model = load_hf_pipeline(os.getenv("HF_TOKEN"))
 
+    st.set_page_config(page_title="Trasncripcion y Resumen de audio", page_icon="🎶")
+
     st.title("Aplicacion de Transcripcion y Analisis de Audio")
 
     uploaded_file = st.file_uploader("Sube un archivo de audio", type=["mp3", "mp4"])
